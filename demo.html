@@ -11,9 +11,9 @@
       // a demo app and we want socket.io to select a transport on each visit.
       var config = { rememberTransport: false },
           socket = new io.Socket(null, config);
-      
+
       socket.connect();
-      
+
       // each message will be a new time, so just insert it directly
       socket.on('message', function(data){
         document.getElementById('time').innerHTML = data;
